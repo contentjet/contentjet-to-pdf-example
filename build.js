@@ -42,7 +42,7 @@ const main = async () => {
     const { css } = sass.renderSync({ file: './src/styles/main.scss' });
     const document = nunjucks.render('main.njk', { content, css });
     // Generate PDF using headless Chrome
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
     const page = await browser.newPage();
     await page.goto('data:text/html;charset=UTF-8,' + document, { waitUntil: 'networkidle0' });
     await page.pdf({ path: 'output.pdf', format: 'A4', printBackground: true });
