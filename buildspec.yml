@@ -2,7 +2,8 @@ version: 0.2
 phases:
   install:
     commands:
-      - apt-get install -y libX11-dev
+      - apt-get update
+      - apt-get install -y libX11-xcb
       - npm install
   pre_build:
     commands:
