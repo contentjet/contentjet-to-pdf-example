@@ -1,0 +1,15 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - npm install
+  pre_build:
+    commands:
+  build:
+    commands:
+      - node build.js
+  post_build:
+    commands:
+artifacts:
+  files:
+    - output.pdf
