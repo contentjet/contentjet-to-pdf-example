@@ -3,7 +3,7 @@ phases:
   install:
     commands:
       - apt-get update
-      - apt-get install -y libX11-xcb-dev libXtst-dev libnss3-dev libXss-dev libasound-dev libatk-bridge2.0-dev
+      - apt-get install -y libX11-xcb-dev libXtst-dev libnss3-dev libXss-dev libasound-dev libatk-bridge2.0-dev libgtk-3-dev
       - npm install
   pre_build:
     commands:
